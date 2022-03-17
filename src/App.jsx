@@ -1,5 +1,5 @@
 import React from "react";
-import { SketchPicker } from "react-color";
+import { BlockPicker } from "react-color";
 
 const App = () => {
   const [bg, setBg] = React.useState("#ffffff");
@@ -33,10 +33,10 @@ const App = () => {
         <h2>Current Background Color Code: </h2>
         <h1 style={{ fontSize: "3rem" }}>{bg}</h1>
         <h3>Choose Another Color To Change Background</h3>
-        <SketchPicker
+        <BlockPicker
           color={bg}
-          onChangeComplete={(color) => {
-            setBg(color.hex);
+	  onChangeComplete={(color, event) => {
+		setBg(color.hex);
           }}
         />
       </div>
