@@ -35,8 +35,8 @@ const App = () => {
         <h3>Choose Another Color To Change Background</h3>
         <BlockPicker
           color={bg}
-	  onChangeComplete={(color, event) => {
-		setBg(color.hex);
+          onChangeComplete={(color) => {
+            setBg(color.hex);
           }}
         />
       </div>
